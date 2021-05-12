@@ -1,0 +1,5 @@
+C:\Users\Ming\Desktop\POS-system-main\POS\pos\pos\obj\Debug\pos.vbprojAssemblyReference.cache
+C:\Users\Ming\Desktop\POS-system-main\POS\pos\pos\obj\Debug\pos.Login.resources
+C:\Users\Ming\Desktop\POS-system-main\POS\pos\pos\obj\Debug\pos.Operation.resources
+C:\Users\Ming\Desktop\POS-system-main\POS\pos\pos\obj\Debug\pos.Report.resources
+C:\Users\Ming\Desktop\POS-system-main\POS\pos\pos\obj\Debug\pos.vbproj.GenerateResource.cache

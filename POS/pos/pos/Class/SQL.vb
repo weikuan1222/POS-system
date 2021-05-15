@@ -1,5 +1,5 @@
 ﻿Imports System.Data.OleDb
-
+Imports pos.Print
 Public Class Connect
     Public Function Connect()
 
@@ -61,7 +61,7 @@ Public Class AddSQL
 
             SQL = "INSERT INTO tblReport ([UserName], [Bill], [Date and Time], [Amount], [Remark]) values(@txtUser,@txtBill,@txtDate,@txtAmount,@txtRemark)"
             Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
-
+            Dim print = New Print
             SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
             SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
             SQLInsert.Parameters.AddWithValue("@txtDate", txtDate)
@@ -70,7 +70,8 @@ Public Class AddSQL
             con.Open()
             SQLInsert.ExecuteNonQuery()
             con.Close()
-                MsgBox("Data Saved!")
+            MsgBox("Data Saved!")
+            print.Print(txtBill, txtAmount, txtRemark, txtUser, txtDate)
         Catch ex As Exception
                 MsgBox(ex.Message)
             End

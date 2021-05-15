@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Print.vb" />
     <Compile Include="Class\SQL.vb" />
     <Compile Include="Form\Login.vb">
       <SubType>Form</SubType>
@@ -108,8 +109,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PrintData.vb" />
-    <Compile Include="PrintingFormat.vb" />
+    <Compile Include="Class\PrintData.vb" />
+    <Compile Include="Class\PrintingFormat.vb" />
     <Compile Include="Database\test2DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

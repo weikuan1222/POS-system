@@ -23,7 +23,6 @@ Partial Class Operation
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnReport = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.rbtCash = New System.Windows.Forms.RichTextBox()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtDate = New System.Windows.Forms.TextBox()
@@ -51,18 +50,9 @@ Partial Class Operation
         Me.btnReport.Text = "Report"
         Me.btnReport.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(689, 169)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 22)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Print"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'rbtCash
         '
-        Me.rbtCash.Location = New System.Drawing.Point(628, 197)
+        Me.rbtCash.Location = New System.Drawing.Point(591, 177)
         Me.rbtCash.Name = "rbtCash"
         Me.rbtCash.Size = New System.Drawing.Size(249, 251)
         Me.rbtCash.TabIndex = 34
@@ -185,13 +175,12 @@ Partial Class Operation
         Me.PrinterToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
         Me.PrinterToolStripMenuItem.Text = "Printer"
         '
-        'Form2
+        'Operation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1237, 489)
         Me.Controls.Add(Me.btnReport)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.rbtCash)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.txtDate)
@@ -206,7 +195,7 @@ Partial Class Operation
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Name = "Form2"
+        Me.Name = "Operation"
         Me.Text = "Form2"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -216,7 +205,6 @@ Partial Class Operation
     End Sub
 
     Friend WithEvents btnReport As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents rbtCash As RichTextBox
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtDate As TextBox

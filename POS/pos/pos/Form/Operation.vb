@@ -4,11 +4,12 @@ Imports System.Data.OleDb
 Imports System.Runtime.InteropServices
 Imports System.IO
 Imports pos.AddSQL
+Imports pos.AutoObjectAdjustment
 
 Public Class Operation
 
     Inherits System.Windows.Forms.Form
-
+    Dim AutoObjectAdjustment = New AutoObjectAdjustment
     Public Property loginuser As String
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -60,5 +61,21 @@ Public Class Operation
         Application.Exit()
 
     End Sub
+
+    Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Me.WindowState = FormWindowState.Maximized
+
+    End Sub
+
+
+    Private Sub Login_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+
+
+        AutoObjectAdjustment.PanelHeightCenterToFormAndLeft(Panel1, Me)
+        AutoObjectAdjustment.PanelHeightCenterToFormAndRight(Panel2, Me)
+
+    End Sub
+
 
 End Class

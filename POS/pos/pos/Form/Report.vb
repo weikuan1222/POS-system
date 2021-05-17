@@ -27,4 +27,9 @@ Public Class Report
 
     End Sub
 
+    Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Me.WindowState = FormWindowState.Maximized
+
+    End Sub
 End Class

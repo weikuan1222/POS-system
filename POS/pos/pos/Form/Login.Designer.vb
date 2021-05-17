@@ -28,13 +28,21 @@ Partial Class Login
         Me.password = New System.Windows.Forms.TextBox()
         Me.username = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.LoginPn = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LoginPn.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(360, 322)
+        Me.btnLogin.AutoSize = True
+        Me.btnLogin.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.btnLogin.Location = New System.Drawing.Point(254, 349)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(129, 40)
+        Me.btnLogin.Size = New System.Drawing.Size(142, 58)
         Me.btnLogin.TabIndex = 11
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
@@ -42,58 +50,95 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(265, 239)
+        Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(12, 12)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 17)
+        Me.Label3.Size = New System.Drawing.Size(171, 40)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Password:"
+        Me.Label3.Text = "Password  :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(265, 178)
+        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 17)
+        Me.Label2.Size = New System.Drawing.Size(169, 40)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "User Name:"
         '
         'password
         '
-        Me.password.Location = New System.Drawing.Point(363, 236)
+        Me.password.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.password.Location = New System.Drawing.Point(192, 9)
         Me.password.Name = "password"
-        Me.password.Size = New System.Drawing.Size(172, 22)
+        Me.password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.password.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.password.Size = New System.Drawing.Size(300, 45)
         Me.password.TabIndex = 8
         '
         'username
         '
-        Me.username.Location = New System.Drawing.Point(363, 173)
+        Me.username.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.username.Location = New System.Drawing.Point(192, 9)
         Me.username.Name = "username"
-        Me.username.Size = New System.Drawing.Size(172, 22)
+        Me.username.Size = New System.Drawing.Size(300, 45)
         Me.username.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(346, 88)
+        Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(230, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 32)
+        Me.Label1.Size = New System.Drawing.Size(196, 46)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Login Page"
         '
-        'Form1
+        'LoginPn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.LoginPn.AutoSize = True
+        Me.LoginPn.Controls.Add(Me.Panel2)
+        Me.LoginPn.Controls.Add(Me.Panel1)
+        Me.LoginPn.Controls.Add(Me.Label1)
+        Me.LoginPn.Controls.Add(Me.btnLogin)
+        Me.LoginPn.Location = New System.Drawing.Point(199, 39)
+        Me.LoginPn.Name = "LoginPn"
+        Me.LoginPn.Size = New System.Drawing.Size(609, 444)
+        Me.LoginPn.TabIndex = 12
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.password)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Location = New System.Drawing.Point(72, 228)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(500, 60)
+        Me.Panel2.TabIndex = 13
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.username)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Location = New System.Drawing.Point(72, 140)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(500, 60)
+        Me.Panel1.TabIndex = 12
+        '
+        'Login
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.password)
-        Me.Controls.Add(Me.username)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.ClientSize = New System.Drawing.Size(1077, 614)
+        Me.Controls.Add(Me.LoginPn)
+        Me.Name = "Login"
+        Me.Text = "Login"
+        Me.LoginPn.ResumeLayout(False)
+        Me.LoginPn.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,4 +150,7 @@ Partial Class Login
     Friend WithEvents password As TextBox
     Friend WithEvents username As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents LoginPn As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
 End Class

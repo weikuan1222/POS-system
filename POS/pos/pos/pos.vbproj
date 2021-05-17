@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\AutoObjectAdjustment.vb" />
     <Compile Include="Class\Print.vb" />
     <Compile Include="Class\SQL.vb" />
     <Compile Include="Form\Login.vb">
@@ -111,11 +112,6 @@
     </Compile>
     <Compile Include="Class\PrintData.vb" />
     <Compile Include="Class\PrintingFormat.vb" />
-    <Compile Include="Database\test2DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>test2DataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\Login.resx">
@@ -145,17 +141,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Database\test2DataSet.xsc">
-      <DependentUpon>test2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database\test2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>test2DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database\test2DataSet.xss">
-      <DependentUpon>test2DataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\PosDB.accdb">

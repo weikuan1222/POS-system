@@ -116,17 +116,21 @@ Public Class AddSQL
     Public Function AddInitialCash(txtCash)
         Dim SQL
         Dim con = Connect()
+        If (txtCash = "") Then
+            txtCash = 0
+        End If
+
 
         Try
-            SQL = "INSERT INTO tblInitialCash ([InitialCash]) values(@txtCash)"
-            Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
-            SQLInsert.Parameters.AddWithValue("@txtCash", txtCash)
-            con.Open()
-            SQLInsert.ExecuteNonQuery()
-            con.Close()
-            MsgBox("Insert Successfully!")
-        Catch ex As Exception
-            MsgBox(ex.Message)
+                SQL = "INSERT INTO tblInitialCash ([InitialCash]) values(@txtCash)"
+                Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
+                SQLInsert.Parameters.AddWithValue("@txtCash", txtCash)
+                con.Open()
+                SQLInsert.ExecuteNonQuery()
+                con.Close()
+                MsgBox("Insert Successfully!")
+            Catch ex As Exception
+                MsgBox(ex.Message)
         End Try
     End Function
 

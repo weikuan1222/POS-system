@@ -1,9 +1,0 @@
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.vbprojAssemblyReference.cache
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.CloseCounter.resources
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.InitialCash.resources
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.Login.resources
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.Operation.resources
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.Report.resources
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.Resources.resources
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.vbproj.GenerateResource.cache
-C:\Users\usr\Source\Repos\weikuan1222\POS-system\POS\pos\pos\obj\Debug\pos.vbproj.CoreCompileInputs.cache

@@ -2,7 +2,8 @@
 Imports pos.CheckSQL
 Imports pos.AutoObjectAdjustment
 Public Class Login
-    Dim AutoObjectAdjustment = New AutoObjectAdjustment
+    Dim ToForm = New ToForm
+    Dim ToParent = New ToParent
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim CheckSQL = New CheckSQL
@@ -44,11 +45,11 @@ Public Class Login
     Private Sub Login_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
 
 
-        AutoObjectAdjustment.PanelCenterToForm(LoginPn, Me)
-        AutoObjectAdjustment.ObjectWidthCenterToParent(Label1)
-        AutoObjectAdjustment.ObjectWidthCenterToParent(Panel1)
-        AutoObjectAdjustment.ObjectWidthCenterToParent(Panel2)
-        AutoObjectAdjustment.ObjectWidthCenterToParent(btnLogin)
+        ToForm.CenterTo(LoginPn, Me)
+        ToParent.WidthCenterTo(Label1)
+        ToParent.WidthCenterTo(Panel1)
+        ToParent.WidthCenterTo(Panel2)
+        ToParent.WidthCenterTo(btnLogin)
 
     End Sub
 

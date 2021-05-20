@@ -58,11 +58,11 @@ Public Class CheckSQL
         Return dt
     End Function
 
-    Public Function CheckInitialCash(txtCash)
+    Public Function CheckInitialCash()
         Try
             Dim con = Connect()
-            Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM tblInitialCash WHERE InitialCash = '" & txtCash & "' ", con)
-        con.Open()
+            Dim cmd As OleDbCommand = New OleDbCommand("SELECT ID FROM tblInitialCash WHERE DateandTime = Date()", con)
+            con.Open()
             If (cmd.ExecuteReader().Read() = True) Then
 
                 Return ("Sucessful")

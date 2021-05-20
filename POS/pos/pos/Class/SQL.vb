@@ -32,14 +32,13 @@ Public Class CheckSQL
 
     End Function
 
-    Public Function CheckBill()
-
+    Public Function CheckBill(DateTimePicker1, DateTimePicker2)
         Dim SQL As New OleDbDataAdapter
         Dim con As New OleDbConnection
         Dim dt As New DataTable
         con = Connect()
         con.Open()
-        SQL = New OleDbDataAdapter("SELECT * FROM tblReport", con)
+        SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.ToString("MM/dd/yyyy") & "# and #" & DateTimePicker2.ToString("MM/dd/yyyy") & "# order by DateandTime desc", con)
         SQL.Fill(dt)
         con.Close()
         Return dt
@@ -63,7 +62,7 @@ Public Class CheckSQL
         Try
             Dim con = Connect()
             Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM tblInitialCash WHERE InitialCash = '" & txtCash & "' ", con)
-            con.Open()
+        con.Open()
             If (cmd.ExecuteReader().Read() = True) Then
 
                 Return ("Sucessful")

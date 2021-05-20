@@ -29,9 +29,9 @@ Partial Class Login
         Me.username = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LoginPn = New System.Windows.Forms.Panel()
-        Me.btnExit = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.LoginPn.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -41,11 +41,10 @@ Partial Class Login
         '
         Me.btnLogin.AutoSize = True
         Me.btnLogin.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.btnLogin.Location = New System.Drawing.Point(198, 279)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogin.Location = New System.Drawing.Point(254, 372)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(106, 46)
-        Me.btnLogin.TabIndex = 3
+        Me.btnLogin.Size = New System.Drawing.Size(142, 62)
+        Me.btnLogin.TabIndex = 11
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
@@ -53,10 +52,9 @@ Partial Class Login
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(9, 10)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(12, 13)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 31)
+        Me.Label3.Size = New System.Drawing.Size(171, 40)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Password  :"
         '
@@ -64,97 +62,88 @@ Partial Class Login
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 10)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(12, 13)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 31)
+        Me.Label2.Size = New System.Drawing.Size(169, 40)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "User Name:"
         '
         'password
         '
         Me.password.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.password.Location = New System.Drawing.Point(144, 7)
-        Me.password.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.password.Location = New System.Drawing.Point(192, 10)
         Me.password.Name = "password"
         Me.password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.password.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.password.Size = New System.Drawing.Size(295, 38)
-        Me.password.TabIndex = 2
+        Me.password.Size = New System.Drawing.Size(300, 45)
+        Me.password.TabIndex = 8
         '
         'username
         '
         Me.username.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.username.Location = New System.Drawing.Point(144, 7)
-        Me.username.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.username.Location = New System.Drawing.Point(192, 10)
         Me.username.Name = "username"
-        Me.username.Size = New System.Drawing.Size(295, 38)
-        Me.username.TabIndex = 0
+        Me.username.Size = New System.Drawing.Size(300, 45)
+        Me.username.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(172, 12)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(230, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(159, 37)
+        Me.Label1.Size = New System.Drawing.Size(196, 46)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Login Page"
         '
         'LoginPn
         '
         Me.LoginPn.AutoSize = True
-        Me.LoginPn.Controls.Add(Me.btnExit)
         Me.LoginPn.Controls.Add(Me.Panel2)
         Me.LoginPn.Controls.Add(Me.Panel1)
         Me.LoginPn.Controls.Add(Me.Label1)
         Me.LoginPn.Controls.Add(Me.btnLogin)
-        Me.LoginPn.Location = New System.Drawing.Point(149, 31)
-        Me.LoginPn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LoginPn.Location = New System.Drawing.Point(199, 42)
         Me.LoginPn.Name = "LoginPn"
-        Me.LoginPn.Size = New System.Drawing.Size(521, 398)
+        Me.LoginPn.Size = New System.Drawing.Size(609, 474)
         Me.LoginPn.TabIndex = 12
-        '
-        'btnExit
-        '
-        Me.btnExit.AutoSize = True
-        Me.btnExit.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.btnExit.Location = New System.Drawing.Point(386, 279)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(106, 46)
-        Me.btnExit.TabIndex = 4
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.password)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(54, 182)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Location = New System.Drawing.Point(72, 243)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(446, 48)
+        Me.Panel2.Size = New System.Drawing.Size(500, 64)
         Me.Panel2.TabIndex = 13
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.username)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(54, 112)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Location = New System.Drawing.Point(72, 149)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(446, 48)
+        Me.Panel1.Size = New System.Drawing.Size(500, 64)
         Me.Panel1.TabIndex = 12
+        '
+        'btnExit
+        '
+        Me.btnExit.AutoSize = True
+        Me.btnExit.Font = New System.Drawing.Font("Arial Narrow", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.Location = New System.Drawing.Point(12, 42)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(142, 62)
+        Me.btnExit.TabIndex = 14
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(808, 491)
+        Me.ClientSize = New System.Drawing.Size(1077, 655)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.LoginPn)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Login"
         Me.Text = "Login"
         Me.LoginPn.ResumeLayout(False)

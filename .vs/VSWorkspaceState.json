@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\POS",
+    "\\POS\\pos",
+    "\\POS\\pos\\pos",
+    "\\POS\\pos\\pos\\Form"
   ],
-  "SelectedNode": "\\pos.sln",
+  "SelectedNode": "\\POS\\pos\\pos\\Form\\CloseCounter.vb",
   "PreviewInSolutionExplorer": false
 }

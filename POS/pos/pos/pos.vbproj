@@ -76,6 +76,18 @@
     <Compile Include="Class\AutoObjectAdjustment.vb" />
     <Compile Include="Class\Print.vb" />
     <Compile Include="Class\SQL.vb" />
+    <Compile Include="Form\CloseCounter.Designer.vb">
+      <DependentUpon>CloseCounter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CloseCounter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\InitialCash.Designer.vb">
+      <DependentUpon>InitialCash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\InitialCash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     <Compile Include="Class\PrintingFormat.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\CloseCounter.resx">
+      <DependentUpon>CloseCounter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InitialCash.resx">
+      <DependentUpon>InitialCash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>

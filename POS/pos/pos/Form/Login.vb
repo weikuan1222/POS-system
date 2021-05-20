@@ -18,10 +18,9 @@ Public Class Login
 
         If (Result = "Sucessful") Then
             MessageBox.Show("Login Successfully!")
-            Dim obj As New Operation
+            Dim obj As New InitialCash
             obj.loginuser = username.Text
             obj.Show()
-            Me.Hide()
 
         Else
 
@@ -71,7 +70,8 @@ Public Class Login
         End If
     End Sub
 
-
-
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
+    End Sub
 End Class
 

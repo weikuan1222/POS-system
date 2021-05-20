@@ -12,9 +12,12 @@ Public Class Operation
     Dim AutoObjectAdjustment = New AutoObjectAdjustment
     Public Property loginuser As String
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Me.Close()
-        Login.Show()
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Login.username.Text = ""
+        Login.password.Text = ""
+
+        Me.Hide()
+        CloseCounter.Show()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -29,20 +32,24 @@ Public Class Operation
         If (txtBill.Text = "") Then
             MsgBox("Please insert Bill number")
         ElseIf (txtAmount.Text = "") Then
+            MsgBox("Please insert price")
+        ElseIf (txtPrice.Text = "") Then
             MsgBox("Please insert amount")
-        ElseIf (txtRemark.Text = "") Then
-            MsgBox("Please insert remark")
         Else
+            txtChange.Text = txtPrice.Text - txtAmount.Text
+
             rbtCash.AppendText("Order Summary" & vbNewLine & vbNewLine)
             rbtCash.AppendText("Bill" & vbTab & vbTab & txtBill.Text & vbNewLine)
-            rbtCash.AppendText("Amount" & vbTab & vbTab & txtAmount.Text & vbNewLine)
+            rbtCash.AppendText("Price" & vbTab & vbTab & txtAmount.Text & vbNewLine)
             rbtCash.AppendText("Remark" & vbTab & vbTab & txtRemark.Text & vbNewLine)
+            rbtCash.AppendText("Amount" & vbTab & vbTab & txtPrice.Text & vbNewLine)
+            rbtCash.AppendText("Change" & vbTab & vbTab & txtChange.Text & vbNewLine)
 
             txtUser.Text = loginuser
             txtDate.Text = Date.Now.ToString("dd-MM-yy")
 
             Dim AddSQL = New AddSQL
-            AddSQL.AddBill(txtUser.Text, txtBill.Text, txtDate.Text, txtAmount.Text, txtRemark.Text)
+            AddSQL.AddBill(txtUser.Text, txtBill.Text, txtDate.Text, txtAmount.Text, txtRemark.Text, txtPrice.Text, txtChange.Text)
         End If
     End Sub
 

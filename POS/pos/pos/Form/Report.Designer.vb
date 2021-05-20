@@ -30,9 +30,9 @@ Partial Class Report
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(66, 24)
+        Me.btnBack.Location = New System.Drawing.Point(66, 26)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(152, 38)
+        Me.btnBack.Size = New System.Drawing.Size(152, 41)
         Me.btnBack.TabIndex = 5
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -41,7 +41,7 @@ Partial Class Report
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(453, 32)
+        Me.Label1.Location = New System.Drawing.Point(453, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(106, 32)
         Me.Label1.TabIndex = 4
@@ -50,18 +50,18 @@ Partial Class Report
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(66, 108)
+        Me.DataGridView1.Location = New System.Drawing.Point(66, 115)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(898, 342)
+        Me.DataGridView1.Size = New System.Drawing.Size(898, 365)
         Me.DataGridView1.TabIndex = 3
         '
         'Report
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1030, 474)
+        Me.ClientSize = New System.Drawing.Size(1117, 553)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)

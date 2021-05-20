@@ -12,7 +12,7 @@ Public Class InitialCash
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Dim AddSQL = New AddSQL
         Dim CheckSQL = New CheckSQL
-        Dim Result
+
         AddSQL.AddInitialCash(txtCash.Text)
 
         Dim obj As New Operation
@@ -32,5 +32,15 @@ Public Class InitialCash
 
     Private Sub InitialCash_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Application.Exit()
+    End Sub
+
+    Private Sub txtCash_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCash.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            btnConfirm.PerformClick()
+        ElseIf Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.KeyChar = ""
+
+
+        End If
     End Sub
 End Class

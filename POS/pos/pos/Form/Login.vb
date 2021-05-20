@@ -4,7 +4,7 @@ Imports pos.AutoObjectAdjustment
 Public Class Login
     Dim ToForm = New ToForm
     Dim ToParent = New ToParent
-
+    Public Property loginuser As String
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim CheckSQL = New CheckSQL
         Dim Result
@@ -56,7 +56,7 @@ Public Class Login
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.WindowState = FormWindowState.Maximized
-
+        username.Focus()
     End Sub
 
     Private Sub Username_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles username.KeyPress
@@ -74,5 +74,7 @@ Public Class Login
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
+
+
 End Class
 

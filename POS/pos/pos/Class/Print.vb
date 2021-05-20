@@ -11,7 +11,7 @@ Imports System.IO
 Public Class Print
 
 
-    Public Function Print(txtBill, txtAmount, txtRemark, txtUser, txtDate)
+    Public Function Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
         Dim StoreName As String = "RECEIPT"
         Dim arrWidth() As Integer
         Dim arrFormat() As StringFormat
@@ -33,8 +33,10 @@ Public Class Print
         arrFormat = {PrintFormat.MidLeft, PrintFormat.MidRight} 'array alignment 
 
         Printer.Print("Bill No." & txtBill, arrWidth, arrFormat)
-        Printer.Print("Amount:" & txtAmount, arrWidth, arrFormat)
+        Printer.Print("Price: RM" & txtAmount, arrWidth, arrFormat)
         Printer.Print("Remark:" & txtRemark, arrWidth, arrFormat)
+        Printer.Print("Amount: RM" & txtPrice, arrWidth, arrFormat)
+        Printer.Print("Change: RM" & txtChange, arrWidth, arrFormat)
 
         Printer.Print("------------------------------------")
         arrWidth = {130, 120} 'array for column width | array untuk lebar kolom

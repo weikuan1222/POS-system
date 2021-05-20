@@ -32,4 +32,5 @@ Public Class Report
         Me.WindowState = FormWindowState.Maximized
 
     End Sub
+
 End Class

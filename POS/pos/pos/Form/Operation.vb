@@ -84,5 +84,11 @@ Public Class Operation
 
     End Sub
 
+    Private Sub btnsw_Click(sender As Object, e As EventArgs) Handles btnsw.Click
 
+        Me.Hide()
+        Login.Show()
+
+
+    End Sub
 End Class

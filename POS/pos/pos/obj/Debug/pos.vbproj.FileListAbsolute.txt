@@ -27,3 +27,8 @@ C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\obj\Debug\pos.vbproj.CoreCompil
 C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\obj\Debug\pos.exe
 C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\obj\Debug\pos.xml
 C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\obj\Debug\pos.pdb
+C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\bin\Debug\Database\PosDB.accdb
+C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\bin\Debug\pos.exe.config
+C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\bin\Debug\pos.exe
+C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\bin\Debug\pos.pdb
+C:\Users\usr\Source\Repos\POS-system\POS\pos\pos\bin\Debug\pos.xml

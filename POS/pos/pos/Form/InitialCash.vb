@@ -44,4 +44,8 @@ Public Class InitialCash
 
         End If
     End Sub
+
+    Private Sub InitialCash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

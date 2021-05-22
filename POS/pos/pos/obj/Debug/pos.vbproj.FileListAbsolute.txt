@@ -1,0 +1,17 @@
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.vbprojAssemblyReference.cache
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\bin\Debug\Database\PosDB.accdb
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\bin\Debug\pos.exe.config
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\bin\Debug\pos.exe
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\bin\Debug\pos.pdb
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\bin\Debug\pos.xml
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.CloseCounter.resources
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.InitialCash.resources
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.Login.resources
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.Operation.resources
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.Report.resources
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.Resources.resources
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.vbproj.GenerateResource.cache
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.vbproj.CoreCompileInputs.cache
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.exe
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.xml
+C:\Users\Ming\source\repos\jingming295\Point-Of-Sale-System\POS\pos\pos\obj\Debug\pos.pdb

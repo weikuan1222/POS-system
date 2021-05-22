@@ -84,5 +84,9 @@ Public Class Operation
 
     End Sub
 
+    Private Sub btnSwitch_Click(sender As Object, e As EventArgs) Handles btnSwitch.Click
+        Me.Hide()
+        Login.Show()
 
+    End Sub
 End Class

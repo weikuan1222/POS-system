@@ -19,9 +19,21 @@ Public Class Login
 
         If (Result = "Sucessful") Then
             MessageBox.Show("Login Successfully!")
-            Dim obj As New InitialCash
-            obj.loginuser = username.Text
-            obj.Show()
+
+
+            Dim TodayInitial = CheckSQL.CheckInitialCash()
+            If (TodayInitial = "Sucessful") Then
+                Dim obj As New Operation
+                obj.loginuser = username.Text
+                obj.Show()
+                Me.Hide()
+            Else
+                Dim obj As New InitialCash
+                obj.loginuser = username.Text
+                obj.Show()
+
+            End If
+
 
         Else
 
@@ -56,6 +68,7 @@ Public Class Login
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.WindowState = FormWindowState.Maximized
+        username.Focus()
 
     End Sub
 

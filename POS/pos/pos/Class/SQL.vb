@@ -58,6 +58,23 @@ Public Class CheckSQL
         Return dt
     End Function
 
+    Public Function ShowInitialCase(Label4)
+        Try
+            Dim con As New OleDbConnection
+            con = Connect()
+            con.Open()
+            Dim cmd As OleDbCommand = New OleDbCommand("SELECT InitialCash FROM tblinitialCash WHERE DateandTime =#" & Today & "#", con)
+            Dim dr As OleDbDataReader = cmd.ExecuteReader
+            If (dr.Read()) Then
+                Label4.text = ["InitialCash"].ToString()
+            End If
+            con.Close()
+        Catch ex As Exception
+            MsgBox("Error:" & vbCrLf & ex.Message)
+            End
+        End Try
+    End Function
+
     Public Function CheckInitialCash(txtCash)
         Try
             Dim con = Connect()

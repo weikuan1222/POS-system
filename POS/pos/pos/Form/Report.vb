@@ -5,6 +5,12 @@ Public Class Report
 
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim dt As New DataTable
+        Dim CheckSQL = New CheckSQL
+        dt = CheckSQL.CheckBill()
+
+        DataGridView1.DataSource = dt.DefaultView
+
 
     End Sub
 
@@ -27,18 +33,4 @@ Public Class Report
 
     End Sub
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim dt As New DataTable
-        Dim CheckSQL = New CheckSQL
-
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "MM/dd/yyyy"
-
-        DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.CustomFormat = "MM/dd/yyyy"
-
-
-
-        DataGridView1.DataSource = dt.DefaultView
-    End Sub
 End Class

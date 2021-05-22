@@ -31,6 +31,7 @@ Public Class Report
         Dim dt As New DataTable
         Dim CheckSQL = New CheckSQL
 
+
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "MM/dd/yyyy"
 

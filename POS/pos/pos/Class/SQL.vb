@@ -122,8 +122,8 @@ Public Class AddSQL
 
 
         Try
-                SQL = "INSERT INTO tblInitialCash ([InitialCash]) values(@txtCash)"
-                Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
+            SQL = "INSERT INTO tblInitialCash ([InitialCash]) values(@txtCash)"
+            Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
                 SQLInsert.Parameters.AddWithValue("@txtCash", txtCash)
                 con.Open()
                 SQLInsert.ExecuteNonQuery()

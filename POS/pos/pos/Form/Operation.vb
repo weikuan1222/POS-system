@@ -30,6 +30,7 @@ Public Class Operation
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
 
 
+
         If (txtBill.Text = "") Then
             MsgBox("Please insert Bill number")
         ElseIf (txtAmount.Text = "") Then

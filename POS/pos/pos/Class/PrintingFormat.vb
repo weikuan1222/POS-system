@@ -10,7 +10,7 @@ Public Class PrintingFormat
     Private mBotLeft As StringFormat = New StringFormat()
     Private mBotCenter As StringFormat = New StringFormat()
     Private mBotRight As StringFormat = New StringFormat()
-
+    \
     Public ReadOnly Property FntTitle() As Font
         Get
             Return New Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point)

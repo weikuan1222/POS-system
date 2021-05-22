@@ -13,6 +13,7 @@ Public Class InitialCash
         Dim AddSQL = New AddSQL
         Dim CheckSQL = New CheckSQL
 
+
         AddSQL.AddInitialCash(txtCash.Text)
 
         Dim obj As New Operation

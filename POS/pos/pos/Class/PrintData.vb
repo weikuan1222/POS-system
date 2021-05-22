@@ -10,6 +10,7 @@ Public Class PrintData
     Private miLeft As Integer = Nothing
     Private mImg As Image = Nothing
 
+
     Private mWidth As Integer = Nothing
     Private mHeight As Integer = Nothing
 

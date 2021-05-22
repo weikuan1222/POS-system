@@ -133,6 +133,9 @@ Public Class AddSQL
     Public Function AddInitialCash(txtCash)
         Dim SQL
         Dim con = Connect()
+        If (txtCash = "") Then
+            txtCash = 0
+        End If
 
         Try
             SQL = "INSERT INTO tblInitialCash ([InitialCash]) values(@txtCash)"

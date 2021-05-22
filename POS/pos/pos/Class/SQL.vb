@@ -103,7 +103,8 @@ Public Class AddSQL
             SQLInsert.ExecuteNonQuery()
             con.Close()
             MsgBox("Data Saved!")
-            print.Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
+
+            'print.Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
         Catch ex As Exception
             MsgBox(ex.Message)
             End

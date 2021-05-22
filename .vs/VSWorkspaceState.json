@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\POS",
-    "\\POS\\pos",
-    "\\POS\\pos\\pos",
-    "\\POS\\pos\\pos\\Form"
+    ""
   ],
-  "SelectedNode": "\\POS\\pos\\pos.sln",
+  "SelectedNode": "\\pos.sln",
   "PreviewInSolutionExplorer": false
 }

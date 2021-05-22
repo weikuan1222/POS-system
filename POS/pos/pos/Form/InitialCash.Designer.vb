@@ -32,52 +32,47 @@ Partial Class InitialCash
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(154, 118)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(206, 158)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 24)
+        Me.Label1.Size = New System.Drawing.Size(149, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Initial Cash:"
         '
         'txtCash
         '
         Me.txtCash.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCash.Location = New System.Drawing.Point(271, 115)
-        Me.txtCash.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCash.Location = New System.Drawing.Point(361, 153)
         Me.txtCash.Name = "txtCash"
-        Me.txtCash.Size = New System.Drawing.Size(143, 28)
+        Me.txtCash.Size = New System.Drawing.Size(189, 34)
         Me.txtCash.TabIndex = 1
         '
         'btnConfirm
         '
-        Me.btnConfirm.Location = New System.Drawing.Point(136, 180)
-        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnConfirm.Location = New System.Drawing.Point(182, 240)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(118, 46)
+        Me.btnConfirm.Size = New System.Drawing.Size(158, 62)
         Me.btnConfirm.TabIndex = 2
         Me.btnConfirm.Text = "Confirm"
         Me.btnConfirm.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(333, 180)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Location = New System.Drawing.Point(444, 240)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(118, 46)
+        Me.btnCancel.Size = New System.Drawing.Size(158, 62)
         Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'InitialCash
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 338)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.txtCash)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "InitialCash"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "InitialCash"

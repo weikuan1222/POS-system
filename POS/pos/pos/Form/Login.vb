@@ -17,33 +17,15 @@ Public Class Login
             End
         End Try
 
-
         If (Result = "Sucessful") Then
             MessageBox.Show("Login Successfully!")
-
-
-
-
-
-            Dim TodayInsertInitialCash = CheckSQL.CheckInitialCash()
-
-            If (TodayInsertInitialCash = "Sucessful") Then
-                Dim obj As New Operation
-                obj.loginuser = username.Text
-                obj.Show()
-                Me.Hide()
-
-
-            Else
-                Dim obj As New InitialCash
-                obj.loginuser = username.Text
-                obj.Show()
-            End If
-
+            Dim obj As New InitialCash
+            obj.loginuser = username.Text
+            obj.Show()
 
         Else
 
-                MessageBox.Show("Invalid username or password!")
+            MessageBox.Show("Invalid username or password!")
             username.Text = ""
             password.Text = ""
             username.Select()
@@ -74,7 +56,7 @@ Public Class Login
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.WindowState = FormWindowState.Maximized
-        username.Focus()
+
     End Sub
 
     Private Sub Username_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles username.KeyPress
@@ -92,7 +74,5 @@ Public Class Login
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
-
-
 End Class
 

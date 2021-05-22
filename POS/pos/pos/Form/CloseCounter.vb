@@ -27,7 +27,6 @@ Public Class CloseCounter
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Hide()
-
         Login.Show()
 
     End Sub

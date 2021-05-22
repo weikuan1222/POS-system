@@ -1,4 +1,4 @@
-﻿Option Strict Off
+Option Strict Off
 Option Explicit On
 Imports System.Data.OleDb
 Imports System.Runtime.InteropServices

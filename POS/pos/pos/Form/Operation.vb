@@ -50,7 +50,7 @@ Public Class Operation
             txtDate.Text = Date.Now.ToString("MM/dd/yyyy")
 
             Dim AddSQL = New AddSQL
-            AddSQL.AddBill(txtUser.Text, txtBill.Text, txtDate.Text, txtAmount.Text, txtRemark.Text, txtPrice.Text, txtChange.Text)
+            AddSQL.AddBill(txtUser.Text, txtBill.Text, txtAmount.Text, txtRemark.Text, txtPrice.Text, txtChange.Text)
         End If
     End Sub
 

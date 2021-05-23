@@ -52,7 +52,7 @@ Public Class CheckSQL
         Dim dt As New DataTable
         con = Connect()
         con.Open()
-        SQL = New OleDbDataAdapter("SELECT * FROM tblInitialCash WHERE DateandTime =#" & Today & "#", con)
+        SQL = New OleDbDataAdapter("SELECT * FROM tblReport WHERE DateandTime =#" & Today & "#", con)
         SQL.Fill(dt)
         con.Close()
         Return dt
@@ -83,18 +83,17 @@ End Class
 Public Class AddSQL
     Inherits Connect
 
-    Public Function AddBill(txtUser, txtBill, txtDate, txtAmount, txtRemark, txtPrice, txtChange)
+    Public Function AddBill(txtUser, txtBill, txtAmount, txtRemark, txtPrice, txtChange)
         Dim SQL
         Dim con = Connect()
 
         Try
 
-            SQL = "INSERT INTO tblReport ([UserName], [Bill], [DateandTime], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtDate,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
+            SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
             Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
             Dim print = New Print
             SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
             SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
-            SQLInsert.Parameters.AddWithValue("@txtDate", txtDate)
             SQLInsert.Parameters.AddWithValue("@txtAmount", txtAmount)
             SQLInsert.Parameters.AddWithValue("@txtRemark", txtRemark)
             SQLInsert.Parameters.AddWithValue("@txtPrice", txtPrice)

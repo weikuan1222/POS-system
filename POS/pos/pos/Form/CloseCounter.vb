@@ -13,7 +13,7 @@ Public Class CloseCounter
         Dim initialcash As Decimal = 0
         Dim total As Decimal = 0
         For i = 0 To DataGridView1.Rows.Count - 1
-            initialcash += DataGridView1.Rows(i).Cells(2).Value
+            initialcash += DataGridView1.Rows(i).Cells(4).Value
             total = initialcash + colsum
         Next
         Label2.Text = initialcash

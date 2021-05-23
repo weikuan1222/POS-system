@@ -52,7 +52,7 @@ Public Class CheckSQL
         Dim dt As New DataTable
         con = Connect()
         con.Open()
-        SQL = New OleDbDataAdapter("SELECT * FROM tblReport WHERE DateandTime =#" & Today & "#", con)
+        SQL = New OleDbDataAdapter("SELECT * FROM tblInitialCash WHERE DateandTime =#" & Today & "#", con)
         SQL.Fill(dt)
         con.Close()
         Return dt

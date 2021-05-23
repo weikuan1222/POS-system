@@ -47,7 +47,7 @@ Public Class Operation
             rbtCash.AppendText("Change" & vbTab & vbTab & txtChange.Text & vbNewLine)
 
             txtUser.Text = loginuser
-            txtDate.Text = Date.Now.ToString("dd-MM-yy")
+            txtDate.Text = Date.Now.ToString("MM/dd/yyyy")
 
             Dim AddSQL = New AddSQL
             AddSQL.AddBill(txtUser.Text, txtBill.Text, txtDate.Text, txtAmount.Text, txtRemark.Text, txtPrice.Text, txtChange.Text)
@@ -89,4 +89,5 @@ Public Class Operation
         Login.Show()
 
     End Sub
+
 End Class

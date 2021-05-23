@@ -38,7 +38,7 @@ Public Class CheckSQL
         Dim dt As New DataTable
         con = Connect()
         con.Open()
-        SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.ToString("MM/dd/yyyy") & "# and #" & DateTimePicker2.ToString("MM/dd/yyyy") & "# order by DateandTime desc", con)
+        SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.Value.Date & "# and #" & DateTimePicker2.Value.Date & "# order by DateandTime desc", con)
         SQL.Fill(dt)
         con.Close()
         Return dt

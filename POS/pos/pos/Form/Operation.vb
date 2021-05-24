@@ -40,6 +40,8 @@ Public Class Operation
             MsgBox("Please insert price")
         ElseIf (txtPrice.Text = "") Then
             MsgBox("Please insert amount")
+        ElseIf (txtPrice.Text < txtAmount.Text) Then
+            MsgBox("Not enough value please insert again")
         Else
             txtChange.Text = txtPrice.Text - txtAmount.Text
 

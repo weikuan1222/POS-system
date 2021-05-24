@@ -25,6 +25,8 @@ Public Class Operation
         txtBill.Text = ""
         txtAmount.Text = ""
         txtRemark.Text = ""
+        txtPrice.Text = ""
+        txtChange.Text = ""
     End Sub
 
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnPrint.Click

@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports pos.CheckSQL
 Public Class CloseCounter
+    Public Property loginuser As String
     Private Sub CloseCounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim dt As New DataTable
         Dim CheckSQL = New CheckSQL
@@ -30,5 +31,12 @@ Public Class CloseCounter
         Me.Hide()
         Login.Show()
 
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Dim obj As New Operation
+        obj.loginuser = loginuser
+        obj.Show()
+        Me.Hide()
     End Sub
 End Class

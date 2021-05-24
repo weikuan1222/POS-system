@@ -30,6 +30,7 @@ Partial Class CloseCounter
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,11 +110,21 @@ Partial Class CloseCounter
         Me.Label6.Size = New System.Drawing.Size(0, 25)
         Me.Label6.TabIndex = 8
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(80, 12)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(175, 33)
+        Me.btnBack.TabIndex = 9
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'CloseCounter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1283, 681)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -139,4 +150,5 @@ Partial Class CloseCounter
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents btnBack As Button
 End Class

@@ -17,8 +17,10 @@ Public Class Operation
         Login.username.Text = ""
         Login.password.Text = ""
 
+        Dim obj As New CloseCounter
+        obj.loginuser = loginuser
+        obj.Show()
         Me.Hide()
-        CloseCounter.Show()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

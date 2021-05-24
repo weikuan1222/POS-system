@@ -30,7 +30,7 @@ Public Class Report
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         Dim dt As New DataTable
         Dim CheckSQL = New CheckSQL
-        dt = CheckSQL.CheckBill(DateTimePicker1, DateTimePicker2)
+        dt = CheckSQL.CheckBill(DateTimePicker1, DateTimePicker2, loginuser)
 
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "MM/dd/yyyy"

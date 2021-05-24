@@ -38,11 +38,24 @@ Public Class CheckSQL
         Dim dt As New DataTable
         con = Connect()
         con.Open()
-        SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.ToString("MM/dd/yyyy") & "# and #" & DateTimePicker2.ToString("MM/dd/yyyy") & "# order by DateandTime desc", con)
+        SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.Value.Date & "# and #" & DateTimePicker2.Value.Date & "# order by DateandTime desc", con)
         SQL.Fill(dt)
         con.Close()
         Return dt
 
+
+    End Function
+
+    Public Function ShowInitialCash()
+        Dim SQL As New OleDbDataAdapter
+        Dim con As New OleDbConnection
+        Dim da As New DataTable
+        con = Connect()
+        con.Open()
+        SQL = New OleDbDataAdapter("SELECT InitialCash FROM tblInitialCash WHERE  DateandTime =#" & Today & "#", con)
+        SQL.Fill(da)
+        con.Close()
+        Return da
 
     End Function
 
@@ -83,18 +96,17 @@ End Class
 Public Class AddSQL
     Inherits Connect
 
-    Public Function AddBill(txtUser, txtBill, txtDate, txtAmount, txtRemark, txtPrice, txtChange)
+    Public Function AddBill(txtUser, txtBill, txtAmount, txtRemark, txtPrice, txtChange)
         Dim SQL
         Dim con = Connect()
 
         Try
 
-            SQL = "INSERT INTO tblReport ([UserName], [Bill], [DateandTime], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtDate,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
+            SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
             Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
             Dim print = New Print
             SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
             SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
-            SQLInsert.Parameters.AddWithValue("@txtDate", txtDate)
             SQLInsert.Parameters.AddWithValue("@txtAmount", txtAmount)
             SQLInsert.Parameters.AddWithValue("@txtRemark", txtRemark)
             SQLInsert.Parameters.AddWithValue("@txtPrice", txtPrice)

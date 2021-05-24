@@ -43,12 +43,12 @@ Partial Class CloseCounter
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(945, 199)
+        Me.DataGridView1.Size = New System.Drawing.Size(1145, 199)
         Me.DataGridView1.TabIndex = 1
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(906, 579)
+        Me.btnClose.Location = New System.Drawing.Point(1050, 579)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(175, 33)
         Me.btnClose.TabIndex = 2
@@ -128,7 +128,7 @@ Partial Class CloseCounter
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(945, 199)
+        Me.DataGridView2.Size = New System.Drawing.Size(557, 136)
         Me.DataGridView2.TabIndex = 10
         '
         'CloseCounter

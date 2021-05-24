@@ -76,6 +76,7 @@
     <Compile Include="Class\AutoObjectAdjustment.vb" />
     <Compile Include="Class\Print.vb" />
     <Compile Include="Class\SQL.vb" />
+    <Compile Include="Class\SQLInjection.vb" />
     <Compile Include="Form\CloseCounter.Designer.vb">
       <DependentUpon>CloseCounter.vb</DependentUpon>
     </Compile>

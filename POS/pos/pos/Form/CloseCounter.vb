@@ -44,4 +44,5 @@ Public Class CloseCounter
         obj.Show()
         Me.Hide()
     End Sub
+
 End Class

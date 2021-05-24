@@ -17,14 +17,18 @@ Public Class Operation
         Login.username.Text = ""
         Login.password.Text = ""
 
+        Dim obj As New CloseCounter
+        obj.loginuser = loginuser
+        obj.Show()
         Me.Hide()
-        CloseCounter.Show()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         txtBill.Text = ""
         txtAmount.Text = ""
         txtRemark.Text = ""
+        txtPrice.Text = ""
+        txtChange.Text = ""
     End Sub
 
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
@@ -47,10 +51,10 @@ Public Class Operation
             rbtCash.AppendText("Change" & vbTab & vbTab & txtChange.Text & vbNewLine)
 
             txtUser.Text = loginuser
-            txtDate.Text = Date.Now.ToString("dd-MM-yy")
+            txtDate.Text = Date.Now.ToString("MM/dd/yyyy")
 
             Dim AddSQL = New AddSQL
-            AddSQL.AddBill(txtUser.Text, txtBill.Text, txtDate.Text, txtAmount.Text, txtRemark.Text, txtPrice.Text, txtChange.Text)
+            AddSQL.AddBill(txtUser.Text, txtBill.Text, txtAmount.Text, txtRemark.Text, txtPrice.Text, txtChange.Text)
         End If
     End Sub
 
@@ -89,4 +93,5 @@ Public Class Operation
         Login.Show()
 
     End Sub
+
 End Class

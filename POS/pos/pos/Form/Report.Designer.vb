@@ -64,21 +64,21 @@ Partial Class Report
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 109)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(212, 116)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(230, 22)
         Me.DateTimePicker1.TabIndex = 6
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(480, 109)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(538, 116)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(230, 22)
         Me.DateTimePicker2.TabIndex = 7
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(765, 90)
+        Me.btnSearch.Location = New System.Drawing.Point(823, 97)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(152, 41)
         Me.btnSearch.TabIndex = 8
@@ -88,7 +88,7 @@ Partial Class Report
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(70, 114)
+        Me.Label2.Location = New System.Drawing.Point(128, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 17)
         Me.Label2.TabIndex = 9
@@ -97,7 +97,7 @@ Partial Class Report
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(411, 114)
+        Me.Label3.Location = New System.Drawing.Point(469, 121)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 17)
         Me.Label3.TabIndex = 10

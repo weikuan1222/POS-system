@@ -1,22 +1,29 @@
 ﻿Imports System.Data.OleDb
 Imports pos.CheckSQL
 Public Class CloseCounter
+    Public Property loginuser As String
     Private Sub CloseCounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim dt As New DataTable
+        Dim dt, da As New DataTable
         Dim CheckSQL = New CheckSQL
-        Dim colsum As Decimal
-        Dim cash As Decimal
-        Dim total As Decimal
-
+        da = CheckSQL.ShowInitialCash()
         dt = CheckSQL.CloseCounter()
 
         DataGridView1.DataSource = dt.DefaultView
-        For Each R As DataGridViewRow In DataGridView1.Rows
-            colsum += R.Cells(4).Value
-            total = colsum + cash
+        DataGridView2.DataSource = da.DefaultView
+
+
+        Dim colsum As Decimal = 0
+        Dim initialcash As Decimal = 0
+        Dim total As Decimal = 0
+        For r = 0 To DataGridView2.Rows.Count - 1
+            colsum += DataGridView2.Rows(r).Cells(0).Value
         Next
-        Label2.Text = colsum
-        Label4.Text = ""
+        Label4.Text = colsum
+        For i = 0 To DataGridView1.Rows.Count - 1
+            initialcash += DataGridView1.Rows(i).Cells(4).Value
+            total = initialcash + colsum
+        Next
+        Label2.Text = initialcash
         Label6.Text = total
 
     End Sub
@@ -29,5 +36,12 @@ Public Class CloseCounter
         Me.Hide()
         Login.Show()
 
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Dim obj As New Operation
+        obj.loginuser = loginuser
+        obj.Show()
+        Me.Hide()
     End Sub
 End Class

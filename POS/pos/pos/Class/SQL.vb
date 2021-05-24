@@ -46,6 +46,19 @@ Public Class CheckSQL
 
     End Function
 
+    Public Function ShowInitialCash()
+        Dim SQL As New OleDbDataAdapter
+        Dim con As New OleDbConnection
+        Dim da As New DataTable
+        con = Connect()
+        con.Open()
+        SQL = New OleDbDataAdapter("SELECT InitialCash FROM tblInitialCash WHERE  DateandTime =#" & Today & "#", con)
+        SQL.Fill(da)
+        con.Close()
+        Return da
+
+    End Function
+
     Public Function CloseCounter()
         Dim SQL As New OleDbDataAdapter
         Dim con As New OleDbConnection

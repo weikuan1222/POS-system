@@ -31,7 +31,9 @@ Partial Class CloseCounter
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -41,7 +43,7 @@ Partial Class CloseCounter
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1001, 382)
+        Me.DataGridView1.Size = New System.Drawing.Size(945, 199)
         Me.DataGridView1.TabIndex = 1
         '
         'btnClose
@@ -119,11 +121,22 @@ Partial Class CloseCounter
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(80, 271)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.RowTemplate.Height = 24
+        Me.DataGridView2.Size = New System.Drawing.Size(945, 199)
+        Me.DataGridView2.TabIndex = 10
+        '
         'CloseCounter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1283, 681)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -137,6 +150,7 @@ Partial Class CloseCounter
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CloseCounter"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,4 +165,5 @@ Partial Class CloseCounter
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents btnBack As Button
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

@@ -3,22 +3,27 @@ Imports pos.CheckSQL
 Public Class CloseCounter
     Public Property loginuser As String
     Private Sub CloseCounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim dt As New DataTable
+        Dim dt, da As New DataTable
         Dim CheckSQL = New CheckSQL
+        da = CheckSQL.ShowInitialCash()
         dt = CheckSQL.CloseCounter()
 
         DataGridView1.DataSource = dt.DefaultView
+        DataGridView2.DataSource = da.DefaultView
 
 
         Dim colsum As Decimal = 0
         Dim initialcash As Decimal = 0
         Dim total As Decimal = 0
+        For r = 0 To DataGridView2.Rows.Count - 1
+            colsum += DataGridView2.Rows(r).Cells(0).Value
+        Next
+        Label4.Text = colsum
         For i = 0 To DataGridView1.Rows.Count - 1
             initialcash += DataGridView1.Rows(i).Cells(4).Value
             total = initialcash + colsum
         Next
         Label2.Text = initialcash
-        Label4.Text = colsum
         Label6.Text = total
 
     End Sub

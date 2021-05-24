@@ -32,15 +32,32 @@ Public Class CheckSQL
 
     End Function
 
-    Public Function CheckBill(DateTimePicker1, DateTimePicker2)
+    Public Function CheckBill(DateTimePicker1, DateTimePicker2, user)
         Dim SQL As New OleDbDataAdapter
         Dim con As New OleDbConnection
         Dim dt As New DataTable
+        Dim adminornot As Integer
         con = Connect()
         con.Open()
-        SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.Value.Date & "# and #" & DateTimePicker2.Value.Date & "# order by DateandTime desc", con)
-        SQL.Fill(dt)
-        con.Close()
+        Dim sqlcheckisadmin As OleDbCommand = New OleDbCommand("SELECT IsAdmin FROM tblUser WHERE UserName = '" & user & "' ", con)
+        Dim isAdmin As OleDbDataReader = sqlcheckisadmin.ExecuteReader()
+        While (isAdmin.Read())
+            adminornot = isAdmin.GetValue(0)
+        End While
+
+        If (adminornot = 0) Then
+            SQL = New OleDbDataAdapter("SELECT * FROM tblReport where UserName = '" & user & "' And DateandTime between #" & DateTimePicker1.Value.Date & "# and #" & DateTimePicker2.Value.Date & "# order by DateandTime desc", con)
+            SQL.Fill(dt)
+            con.Close()
+        ElseIf (adminornot = 1) Then
+            SQL = New OleDbDataAdapter("SELECT * FROM tblReport where DateandTime between #" & DateTimePicker1.Value.Date & "# and #" & DateTimePicker2.Value.Date & "# order by DateandTime desc", con)
+            SQL.Fill(dt)
+            con.Close()
+
+        End If
+
+
+
         Return dt
 
 

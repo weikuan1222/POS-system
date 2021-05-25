@@ -44,4 +44,6 @@ Public Class InitialCash
 
         End If
     End Sub
+
+
 End Class

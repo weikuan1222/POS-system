@@ -35,9 +35,9 @@ Partial Class Report
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(66, 26)
+        Me.btnBack.Location = New System.Drawing.Point(66, 24)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(152, 41)
+        Me.btnBack.Size = New System.Drawing.Size(152, 38)
         Me.btnBack.TabIndex = 5
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -46,7 +46,7 @@ Partial Class Report
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(517, 35)
+        Me.Label1.Location = New System.Drawing.Point(517, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(106, 32)
         Me.Label1.TabIndex = 4
@@ -55,32 +55,32 @@ Partial Class Report
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(115, 166)
+        Me.DataGridView1.Location = New System.Drawing.Point(115, 156)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(898, 365)
+        Me.DataGridView1.Size = New System.Drawing.Size(1484, 743)
         Me.DataGridView1.TabIndex = 3
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(212, 116)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(212, 109)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(230, 22)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(230, 25)
         Me.DateTimePicker1.TabIndex = 6
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(538, 116)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(538, 109)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(230, 22)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(230, 25)
         Me.DateTimePicker2.TabIndex = 7
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(823, 97)
+        Me.btnSearch.Location = New System.Drawing.Point(825, 101)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(152, 41)
+        Me.btnSearch.Size = New System.Drawing.Size(152, 38)
         Me.btnSearch.TabIndex = 8
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
@@ -88,26 +88,26 @@ Partial Class Report
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(128, 121)
+        Me.Label2.Location = New System.Drawing.Point(128, 113)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 17)
+        Me.Label2.Size = New System.Drawing.Size(87, 15)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "From Date:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(469, 121)
+        Me.Label3.Location = New System.Drawing.Point(469, 113)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 17)
+        Me.Label3.Size = New System.Drawing.Size(71, 15)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "To Date:"
         '
         'Report
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1117, 553)
+        Me.ClientSize = New System.Drawing.Size(1662, 928)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnSearch)

@@ -116,28 +116,37 @@ Public Class AddSQL
     Public Function AddBill(txtUser, txtBill, txtAmount, txtRemark, txtPrice, txtChange)
         Dim SQL
         Dim con = Connect()
+        If (txtPrice > txtAmount) Then
+            MsgBox("Not enough value, please insert again")
 
-        Try
+        Else
 
-            SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
-            Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
-            Dim print = New Print
-            SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
-            SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
-            SQLInsert.Parameters.AddWithValue("@txtAmount", txtAmount)
-            SQLInsert.Parameters.AddWithValue("@txtRemark", txtRemark)
-            SQLInsert.Parameters.AddWithValue("@txtPrice", txtPrice)
-            SQLInsert.Parameters.AddWithValue("@txtChange", txtChange)
-            con.Open()
-            SQLInsert.ExecuteNonQuery()
-            con.Close()
-            MsgBox("Data Saved!")
+            Try
 
-            'print.Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            End
-        End Try
+                SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
+                Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
+                Dim print = New Print
+                SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
+                SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
+                SQLInsert.Parameters.AddWithValue("@txtAmount", txtAmount)
+                SQLInsert.Parameters.AddWithValue("@txtRemark", txtRemark)
+                SQLInsert.Parameters.AddWithValue("@txtPrice", txtPrice)
+                SQLInsert.Parameters.AddWithValue("@txtChange", txtChange)
+                con.Open()
+                SQLInsert.ExecuteNonQuery()
+                con.Close()
+                MsgBox("Data Saved!")
+
+                'print.Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+                End
+            End Try
+
+
+        End If
+
+
 
 
 

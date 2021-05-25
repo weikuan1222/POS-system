@@ -1,6 +1,10 @@
 ﻿Imports System.Data.OleDb
 Imports pos.CheckSQL
 Public Class CloseCounter
+
+    Inherits System.Windows.Forms.Form
+    Dim ToForm = New ToForm
+    Dim ToParent = New ToParent
     Public Property loginuser As String
     Private Sub CloseCounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim dt, da As New DataTable

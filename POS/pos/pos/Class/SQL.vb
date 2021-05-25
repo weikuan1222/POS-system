@@ -120,7 +120,7 @@ End Class
 Public Class AddSQL
     Inherits Connect
 
-    Public Function AddBill(txtUser, txtBill, txtAmount, txtRemark, txtPrice, txtChange)
+    Public Function AddBill(txtUser, txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtDate)
         BackEndUserInputCheck.NoInputSymbol(txtUser)
         BackEndUserInputCheck.OnlyInputNumber(txtBill)
         BackEndUserInputCheck.OnlyInputNumber(txtAmount)
@@ -134,25 +134,25 @@ Public Class AddSQL
 
         Try
 
-                SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
-                Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
-                Dim print = New Print
-                SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
-                SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
-                SQLInsert.Parameters.AddWithValue("@txtAmount", txtAmount)
-                SQLInsert.Parameters.AddWithValue("@txtRemark", txtRemark)
-                SQLInsert.Parameters.AddWithValue("@txtPrice", txtPrice)
-                SQLInsert.Parameters.AddWithValue("@txtChange", txtChange)
-                con.Open()
-                SQLInsert.ExecuteNonQuery()
-                con.Close()
-                MsgBox("Data Saved!")
+            SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
+            Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
+            Dim print = New Print
+            SQLInsert.Parameters.AddWithValue("@txtUser", txtUser)
+            SQLInsert.Parameters.AddWithValue("@txtBill", txtBill)
+            SQLInsert.Parameters.AddWithValue("@txtAmount", txtAmount)
+            SQLInsert.Parameters.AddWithValue("@txtRemark", txtRemark)
+            SQLInsert.Parameters.AddWithValue("@txtPrice", txtPrice)
+            SQLInsert.Parameters.AddWithValue("@txtChange", txtChange)
+            con.Open()
+            SQLInsert.ExecuteNonQuery()
+            con.Close()
+            MsgBox("Data Saved!")
 
-                'print.Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                End
-            End Try
+            print.Print(txtBill, txtAmount, txtRemark, txtPrice, txtChange, txtUser, txtDate)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            End
+        End Try
 
 
 

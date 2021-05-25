@@ -8,7 +8,7 @@ Imports pos.AutoObjectAdjustment
 
 Public Class InitialCash
     Public Property loginuser As String
-
+    Dim FrontEndUserInputCheck = New FrontEndUserInputCheck
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Dim AddSQL = New AddSQL
         Dim CheckSQL = New CheckSQL
@@ -36,13 +36,9 @@ Public Class InitialCash
     End Sub
 
     Private Sub txtCash_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCash.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnConfirm.PerformClick()
-        ElseIf Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
-            e.KeyChar = ""
 
+        e.KeyChar = FrontEndUserInputCheck.OnlyInputNumber(e, btnConfirm)
 
-        End If
     End Sub
 
 End Class

@@ -1,6 +1,9 @@
 ﻿Imports System.Data.OleDb
 Imports pos.Print
+Imports pos.UserInputCheck
+
 Public Class Connect
+    Public BackEndUserInputCheck As New BackEndUserInputCheck
     Public Function Connect()
 
         Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database/PosDB.accdb")
@@ -15,6 +18,9 @@ Public Class CheckSQL
     Public Function CheckUser(username, password)
 
         Try
+            BackEndUserInputCheck.NoInputSymbol(username)
+            BackEndUserInputCheck.NoInputSymbol(password)
+
             Dim con = Connect()
             Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM tblUser WHERE UserName = '" & username & "' AND [Password] = '" & password & "' ", con)
             con.Open()
@@ -33,6 +39,7 @@ Public Class CheckSQL
     End Function
 
     Public Function CheckBill(DateTimePicker1, DateTimePicker2, user)
+        BackEndUserInputCheck.NoInputSymbol(user)
         Dim SQL As New OleDbDataAdapter
         Dim con As New OleDbConnection
         Dim dt As New DataTable
@@ -114,14 +121,18 @@ Public Class AddSQL
     Inherits Connect
 
     Public Function AddBill(txtUser, txtBill, txtAmount, txtRemark, txtPrice, txtChange)
+        BackEndUserInputCheck.NoInputSymbol(txtUser)
+        BackEndUserInputCheck.OnlyInputNumber(txtBill)
+        BackEndUserInputCheck.OnlyInputNumber(txtAmount)
+        BackEndUserInputCheck.NoInputSymbol(txtRemark)
+        BackEndUserInputCheck.OnlyInputNumber(txtPrice)
+        BackEndUserInputCheck.OnlyInputNumber(txtChange)
+
         Dim SQL
         Dim con = Connect()
-        If (txtPrice > txtAmount) Then
-            MsgBox("Not enough value, please insert again")
 
-        Else
 
-            Try
+        Try
 
                 SQL = "INSERT INTO tblReport ([UserName], [Bill], [Amount], [Remark], [Price], [Change]) values(@txtUser,@txtBill,@txtAmount,@txtRemark,@txtPrice,@txtChange)"
                 Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
@@ -144,7 +155,7 @@ Public Class AddSQL
             End Try
 
 
-        End If
+
 
 
 
@@ -153,6 +164,7 @@ Public Class AddSQL
     End Function
 
     Public Function AddInitialCash(txtCash)
+        BackEndUserInputCheck.OnlyInputNumber(txtCash)
         Dim SQL
         Dim con = Connect()
         If (txtCash = "") Then
@@ -163,13 +175,13 @@ Public Class AddSQL
         Try
             SQL = "INSERT INTO tblInitialCash ([InitialCash]) values(@txtCash)"
             Dim SQLInsert As OleDbCommand = New OleDbCommand(SQL, con)
-                SQLInsert.Parameters.AddWithValue("@txtCash", txtCash)
-                con.Open()
-                SQLInsert.ExecuteNonQuery()
-                con.Close()
-                MsgBox("Insert Successfully!")
-            Catch ex As Exception
-                MsgBox(ex.Message)
+            SQLInsert.Parameters.AddWithValue("@txtCash", txtCash)
+            con.Open()
+            SQLInsert.ExecuteNonQuery()
+            con.Close()
+            MsgBox("Insert Successfully!")
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Function
 

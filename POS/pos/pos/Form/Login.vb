@@ -3,10 +3,11 @@ Imports pos.CheckSQL
 Imports pos.AutoObjectAdjustment
 Imports System.Text.RegularExpressions
 
+
 Public Class Login
     Dim ToForm = New ToForm
     Dim ToParent = New ToParent
-
+    Dim FrontEndUserInputCheck = New FrontEndUserInputCheck
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim CheckSQL = New CheckSQL
         Dim Result
@@ -75,42 +76,21 @@ Public Class Login
     End Sub
 
     Private Sub Username_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles username.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnLogin.PerformClick()
-        End If
+
+        e.KeyChar = FrontEndUserInputCheck.NoInputSymbol(e, btnLogin)
+
     End Sub
 
     Private Sub Password_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles password.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnLogin.PerformClick()
-        End If
+        e.KeyChar = FrontEndUserInputCheck.NoInputSymbol(e, btnLogin)
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
 
-    Private Sub password_TextChanged(sender As Object, e As EventArgs) Handles password.TextChanged
-        If Not System.Text.RegularExpressions.Regex.IsMatch(password.Text, "^[a-zA-Z0-9]*$") Then
-            MessageBox.Show("You may only enter letters", "Error")
-            password.Text = ""
-            btnLogin.Enabled = False
-        Else
-            btnLogin.Enabled = True
 
-        End If
-        Return
-    End Sub
 
-    Private Sub username_TextChanged(sender As Object, e As EventArgs) Handles username.TextChanged
-        If Not System.Text.RegularExpressions.Regex.IsMatch(username.Text, "^[a-zA-Z0-9]*$") Then
-            MessageBox.Show("You may only enter letters", "Error")
-            username.Text = ""
-            btnLogin.Enabled = False
-        Else
-            btnLogin.Enabled = True
-        End If
-        Return
-    End Sub
+
 End Class
 

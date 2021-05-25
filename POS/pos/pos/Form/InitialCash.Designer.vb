@@ -32,7 +32,7 @@ Partial Class InitialCash
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(206, 158)
+        Me.Label1.Location = New System.Drawing.Point(206, 148)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(149, 29)
         Me.Label1.TabIndex = 0
@@ -41,34 +41,34 @@ Partial Class InitialCash
         'txtCash
         '
         Me.txtCash.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCash.Location = New System.Drawing.Point(361, 153)
+        Me.txtCash.Location = New System.Drawing.Point(361, 143)
         Me.txtCash.Name = "txtCash"
         Me.txtCash.Size = New System.Drawing.Size(189, 34)
         Me.txtCash.TabIndex = 1
         '
         'btnConfirm
         '
-        Me.btnConfirm.Location = New System.Drawing.Point(182, 240)
+        Me.btnConfirm.Location = New System.Drawing.Point(182, 225)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(158, 62)
+        Me.btnConfirm.Size = New System.Drawing.Size(158, 58)
         Me.btnConfirm.TabIndex = 2
         Me.btnConfirm.Text = "Confirm"
         Me.btnConfirm.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(444, 240)
+        Me.btnCancel.Location = New System.Drawing.Point(444, 225)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(158, 62)
+        Me.btnCancel.Size = New System.Drawing.Size(158, 58)
         Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'InitialCash
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 422)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.txtCash)

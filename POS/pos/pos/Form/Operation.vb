@@ -4,7 +4,7 @@ Imports System.Data.OleDb
 Imports System.Runtime.InteropServices
 Imports System.IO
 Imports pos.AddSQL
-Imports pos.AutoObjectAdjustment
+
 
 Public Class Operation
 
@@ -12,6 +12,7 @@ Public Class Operation
     Dim ToForm = New ToForm
     Dim ToParent = New ToParent
     Public Property loginuser As String
+    Dim FrontEndUserInputCheck As New FrontEndUserInputCheck
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Login.username.Text = ""
@@ -32,13 +33,15 @@ Public Class Operation
 
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
 
-
         If (txtBill.Text = "") Then
             MsgBox("Please insert Bill number")
         ElseIf (txtAmount.Text = "") Then
             MsgBox("Please insert price")
         ElseIf (txtPrice.Text = "") Then
             MsgBox("Please insert amount")
+        ElseIf (txtPrice.Text > txtAmount.Text) Then
+            MsgBox("Not enough value, please insert again")
+
         Else
             txtChange.Text = txtPrice.Text - txtAmount.Text
 
@@ -76,7 +79,7 @@ Public Class Operation
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.WindowState = FormWindowState.Maximized
-
+        txtBill.Focus()
     End Sub
 
 
@@ -94,33 +97,30 @@ Public Class Operation
 
     End Sub
 
-    Private Sub txtAmount_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtAmount.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnPrint.PerformClick()
-        ElseIf Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
-            e.KeyChar = ""
-        End If
-    End Sub
+
 
     Private Sub txtBill_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBill.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnPrint.PerformClick()
-        ElseIf Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
-            e.KeyChar = ""
-        End If
+
+        e.KeyChar = FrontEndUserInputCheck.OnlyInputNumber(e, btnPrint)
+
     End Sub
 
     Private Sub txtPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrice.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnPrint.PerformClick()
-        ElseIf Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
-            e.KeyChar = ""
-        End If
+
+        e.KeyChar = FrontEndUserInputCheck.OnlyInputNumber(e, btnPrint)
+
     End Sub
 
     Private Sub txtRemark_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRemark.KeyPress
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            btnPrint.PerformClick()
-        End If
+
+        e.KeyChar = FrontEndUserInputCheck.NoInputSymbol(e, btnPrint)
+
     End Sub
+
+    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmount.KeyPress
+
+        e.KeyChar = FrontEndUserInputCheck.NoInputSymbol(e, btnPrint)
+
+    End Sub
+
 End Class

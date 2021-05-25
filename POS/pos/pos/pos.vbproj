@@ -48,7 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -74,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AutoObjectAdjustment.vb" />
+    <Compile Include="Class\UserInputCheck.vb" />
     <Compile Include="Class\Print.vb" />
     <Compile Include="Class\SQL.vb" />
     <Compile Include="Class\SQLInjection.vb" />
@@ -125,6 +128,7 @@
     </Compile>
     <Compile Include="Class\PrintData.vb" />
     <Compile Include="Class\PrintingFormat.vb" />
+    <Compile Include="UserInputCheck.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\CloseCounter.resx">

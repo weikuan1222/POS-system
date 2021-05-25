@@ -1,6 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports pos.CheckSQL
 Imports pos.AutoObjectAdjustment
+Imports System.Text.RegularExpressions
+
 Public Class Login
     Dim ToForm = New ToForm
     Dim ToParent = New ToParent
@@ -86,6 +88,29 @@ Public Class Login
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
+    End Sub
+
+    Private Sub password_TextChanged(sender As Object, e As EventArgs) Handles password.TextChanged
+        If Not System.Text.RegularExpressions.Regex.IsMatch(password.Text, "^[a-zA-Z0-9]*$") Then
+            MessageBox.Show("You may only enter letters", "Error")
+            password.Text = ""
+            btnLogin.Enabled = False
+        Else
+            btnLogin.Enabled = True
+
+        End If
+        Return
+    End Sub
+
+    Private Sub username_TextChanged(sender As Object, e As EventArgs) Handles username.TextChanged
+        If Not System.Text.RegularExpressions.Regex.IsMatch(username.Text, "^[a-zA-Z0-9]*$") Then
+            MessageBox.Show("You may only enter letters", "Error")
+            username.Text = ""
+            btnLogin.Enabled = False
+        Else
+            btnLogin.Enabled = True
+        End If
+        Return
     End Sub
 End Class
 

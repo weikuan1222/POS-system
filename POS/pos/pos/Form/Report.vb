@@ -1,12 +1,10 @@
 ﻿Imports System.Data.OleDb
 Imports pos.CheckSQL
 Public Class Report
+    Inherits System.Windows.Forms.Form
+    Dim ToForm = New ToForm
+    Dim ToParent = New ToParent
     Public Property loginuser As String
-
-
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Dim obj As New Operation
@@ -41,5 +39,10 @@ Public Class Report
 
 
         DataGridView1.DataSource = dt.DefaultView
+    End Sub
+
+    Private Sub Report_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        ToForm.CenterTo(Panel1, Me)
+        ToParent.WidthCenterTo(Label1)
     End Sub
 End Class

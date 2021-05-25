@@ -6,7 +6,9 @@ Public Class CloseCounter
     Dim ToForm = New ToForm
     Dim ToParent = New ToParent
     Public Property loginuser As String
-    Private Sub CloseCounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CloseCounter_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.WindowState = FormWindowState.Maximized
+
         Dim dt, da As New DataTable
         Dim CheckSQL = New CheckSQL
         da = CheckSQL.ShowInitialCash()
@@ -49,4 +51,8 @@ Public Class CloseCounter
         Me.Hide()
     End Sub
 
+    Private Sub CloseCounter_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        ToForm.CenterTo(Panel1, Me)
+        ToParent.WidthCenterTo(Label7)
+    End Sub
 End Class

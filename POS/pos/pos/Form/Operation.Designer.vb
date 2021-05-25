@@ -36,22 +36,19 @@ Partial Class Operation
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnSwitch = New System.Windows.Forms.Button()
         Me.txtChange = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnReport
         '
         Me.btnReport.Font = New System.Drawing.Font("Arial Narrow", 12.8!, System.Drawing.FontStyle.Bold)
-        Me.btnReport.Location = New System.Drawing.Point(9, 118)
+        Me.btnReport.Location = New System.Drawing.Point(376, 26)
         Me.btnReport.Name = "btnReport"
         Me.btnReport.Size = New System.Drawing.Size(176, 39)
         Me.btnReport.TabIndex = 36
@@ -61,7 +58,7 @@ Partial Class Operation
         'rbtCash
         '
         Me.rbtCash.Enabled = False
-        Me.rbtCash.Location = New System.Drawing.Point(109, 159)
+        Me.rbtCash.Location = New System.Drawing.Point(859, 187)
         Me.rbtCash.Name = "rbtCash"
         Me.rbtCash.Size = New System.Drawing.Size(249, 267)
         Me.rbtCash.TabIndex = 34
@@ -70,7 +67,7 @@ Partial Class Operation
         'txtUser
         '
         Me.txtUser.Enabled = False
-        Me.txtUser.Location = New System.Drawing.Point(164, 18)
+        Me.txtUser.Location = New System.Drawing.Point(914, 46)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(116, 22)
         Me.txtUser.TabIndex = 32
@@ -78,7 +75,7 @@ Partial Class Operation
         'txtDate
         '
         Me.txtDate.Enabled = False
-        Me.txtDate.Location = New System.Drawing.Point(164, 65)
+        Me.txtDate.Location = New System.Drawing.Point(914, 93)
         Me.txtDate.Name = "txtDate"
         Me.txtDate.Size = New System.Drawing.Size(116, 22)
         Me.txtDate.TabIndex = 31
@@ -86,7 +83,7 @@ Partial Class Operation
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial Narrow", 12.8!, System.Drawing.FontStyle.Bold)
-        Me.btnExit.Location = New System.Drawing.Point(9, 27)
+        Me.btnExit.Location = New System.Drawing.Point(12, 26)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(176, 39)
         Me.btnExit.TabIndex = 30
@@ -177,52 +174,33 @@ Partial Class Operation
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "Main Page"
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1554, 24)
-        Me.MenuStrip1.TabIndex = 33
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.rbtCash)
-        Me.Panel1.Controls.Add(Me.txtUser)
-        Me.Panel1.Controls.Add(Me.txtDate)
-        Me.Panel1.Location = New System.Drawing.Point(952, 44)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(590, 496)
-        Me.Panel1.TabIndex = 37
-        '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.btnSwitch)
+        Me.Panel2.Controls.Add(Me.rbtCash)
+        Me.Panel2.Controls.Add(Me.txtUser)
+        Me.Panel2.Controls.Add(Me.txtDate)
         Me.Panel2.Controls.Add(Me.txtChange)
         Me.Panel2.Controls.Add(Me.txtPrice)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.btnReport)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.btnExit)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.btnCancel)
         Me.Panel2.Controls.Add(Me.txtBill)
         Me.Panel2.Controls.Add(Me.btnPrint)
         Me.Panel2.Controls.Add(Me.txtAmount)
         Me.Panel2.Controls.Add(Me.txtRemark)
-        Me.Panel2.Location = New System.Drawing.Point(0, 26)
+        Me.Panel2.Location = New System.Drawing.Point(235, 72)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(811, 640)
+        Me.Panel2.Size = New System.Drawing.Size(1158, 640)
         Me.Panel2.TabIndex = 38
         '
         'btnSwitch
         '
         Me.btnSwitch.Font = New System.Drawing.Font("Arial Narrow", 12.8!, System.Drawing.FontStyle.Bold)
-        Me.btnSwitch.Location = New System.Drawing.Point(9, 73)
+        Me.btnSwitch.Location = New System.Drawing.Point(194, 27)
         Me.btnSwitch.Name = "btnSwitch"
         Me.btnSwitch.Size = New System.Drawing.Size(176, 39)
         Me.btnSwitch.TabIndex = 41
@@ -272,16 +250,14 @@ Partial Class Operation
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1554, 947)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnSwitch)
+        Me.Controls.Add(Me.btnReport)
         Me.Name = "Operation"
         Me.Text = "Form2"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -299,8 +275,6 @@ Partial Class Operation
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txtChange As TextBox
     Friend WithEvents txtPrice As TextBox

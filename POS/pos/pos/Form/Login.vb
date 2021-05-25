@@ -93,6 +93,7 @@ Public Class Login
     Private Sub password_TextChanged(sender As Object, e As EventArgs) Handles password.TextChanged
         If Not System.Text.RegularExpressions.Regex.IsMatch(password.Text, "^[a-zA-Z0-9]*$") Then
             MessageBox.Show("You may only enter letters", "Error")
+            password.Text = ""
             btnLogin.Enabled = False
         Else
             btnLogin.Enabled = True
@@ -104,6 +105,7 @@ Public Class Login
     Private Sub username_TextChanged(sender As Object, e As EventArgs) Handles username.TextChanged
         If Not System.Text.RegularExpressions.Regex.IsMatch(username.Text, "^[a-zA-Z0-9]*$") Then
             MessageBox.Show("You may only enter letters", "Error")
+            username.Text = ""
             btnLogin.Enabled = False
         Else
             btnLogin.Enabled = True

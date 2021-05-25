@@ -81,7 +81,8 @@ Public Class Operation
 
 
     Private Sub Login_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
-
+        ToForm.CenterTo(Panel2, Me)
+        ToParent.WidthCenterTo(Label1)
 
 
 
